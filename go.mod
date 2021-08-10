@@ -1,5 +1,5 @@
-module github.com/Usarneme/photo_api_cli
+module main
 
 go 1.16
 
-require github.com/fatih/color v1.10.0
+require github.com/fatih/color v1.12.0
