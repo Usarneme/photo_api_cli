@@ -34,11 +34,7 @@ func main() {
 	} else {
 		albumID = os.Args[1]
 	}
-	url, urlErrors := photo_album.FormatUrl(albumID)
-	if urlErrors != nil {
-		fmt.Println("ERROR getting formatted url %s", urlErrors)
-		os.Exit(1)
-	}
+	url := photo_album.FormatUrl(albumID)
 
 	// fmt.Printf("Querying URL: %s\n", url)
 	result, queryError := photo_album.MakeRequest(url)

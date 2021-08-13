@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
-	"os"
 	"strconv"
 	"time"
 )
@@ -26,9 +25,9 @@ func Validate(inputs []string) (bool, error) {
 	}
 	if len(inputs) > 1 {
 		// check for a non-numerical album ID
-		_, integerError := strconv.Atoi(os.Args[1])
+		_, integerError := strconv.Atoi(inputs[1])
 		if integerError != nil {
-			var errString string = "[usage error] - You did not enter a valid number for the album ID. \n[usage error] - Received: " + integerError.Error() + ". \n[usage error] - Please try again or to see more info, try: go run photo_api_cli.go --help\n"
+			var errString string = "[usage error] - You did not enter a valid number for the album ID.\n[usage error] - Please try again or to see more info, try: go run photo_api_cli.go --help\n"
 			return false, errors.New(errString)
 		}
 	}
@@ -36,17 +35,13 @@ func Validate(inputs []string) (bool, error) {
 	return true, nil
 }
 
-func FormatUrl(albumID string) (string, error) {
+func FormatUrl(albumID string) string {
 	if albumID == "" {
-		// fmt.Printf("Searching for photos from the beginning album.\n")
 		url := "https://jsonplaceholder.typicode.com/photos?albumId=1"
-		return url, nil
-	} else {
-		// fmt.Printf("Searching for photos starting at album ID #%s.\n", albumID)
-		url := "https://jsonplaceholder.typicode.com/photos?albumId=" + albumID
-		return url, nil
+		return url
 	}
-	return "", errors.New("Invalid AlbumID")
+	url := "https://jsonplaceholder.typicode.com/photos?albumId=" + albumID
+	return url
 }
 
 func MakeRequest(url string) ([]Album, error) {
