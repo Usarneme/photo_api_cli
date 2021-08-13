@@ -14,25 +14,30 @@ Visit [https://golang.org/doc/install](https://golang.org/doc/install) to get an
 
 ---
 
-### Installation Instructions
+### Usage Instructions
 
 1. Clone this repository with `git clone https://github.com/Usarneme/photo_api_cli`
 2. Enter the new directory with `cd photo_api_cli`
 3. Enter the main program entrypoint directory with `cd main`
-4. Compile an executable with `go build`; this will generate a file called _main_
-
----
-
-### Usage Instructions
-
-- If on a Mac or POSIX-compliant Linux machine, run the compiled binary from within the main/ directory by typing `./main` in your terminal of choice
-- Utilize `./main --help` to see usage instructions:
+4. If on a Mac or POSIX-compliant Linux machine, run the compiled binary from within the main/ directory by typing `./main` in your terminal of choice
+5. Utilize `./main --help` to see usage instructions:
 
 ```
 [usage] - You can call this CLI application with an optional album number.
 [usage] - Either provide a number: ./main 18
 [usage] - or, with no arguments to see the first set of albums: ./main
 ```
+
+---
+
+### Installation Instructions
+
+(Optional) Only follow these if you want to compile from source:
+
+1. Clone this repository with `git clone https://github.com/Usarneme/photo_api_cli`
+2. Enter the new directory with `cd photo_api_cli`
+3. Enter the main program entrypoint directory with `cd main`
+4. Compile an executable with `go build`; this will generate a file called _main_
 
 ---
 
