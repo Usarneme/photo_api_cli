@@ -28,12 +28,15 @@ Visit [https://golang.org/doc/install](https://golang.org/doc/install) to get an
 
 - If on a Mac or POSIX-compliant Linux machine, run the compiled binary from within the main/ directory by typing `./main` in your terminal of choice
 - Utilize `./main --help` to see usage instructions:
-  > [usage] - You can call this CLI application with an optional album number.
-  > [usage] - Either provide a number: ./main 18
-  > [usage] - or, with no arguments to see the first set of albums: ./main
+
+```
+[usage] - You can call this CLI application with an optional album number.
+[usage] - Either provide a number: ./main 18
+[usage] - or, with no arguments to see the first set of albums: ./main
+```
 
 ---
 
-### Copyright 2021 Tom/Usarneme
+### Copyright &copy; 2021 Tom/Usarneme
 
 Please open a pull request if any bugs are found!
