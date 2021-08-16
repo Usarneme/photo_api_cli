@@ -8,19 +8,21 @@ A command line application for accessing photo gallery data via JSON API.
 
 1. A terminal program such as iTerm on Mac, cmd prompt or GitBash on Windows, and Terminal on Linux
 2. Permissions to compile and/or run applications on your machine
-3. (Optional) The Go language needed to build your own binary. main/main is an executable compiled on a recent Mac so if you also have a Mac it should run without needing recompile.
+3. The Go programming language needed to build the executable
 
 Visit [https://golang.org/doc/install](https://golang.org/doc/install) to get and install Go on your machine
 
 ---
 
-### Usage Instructions
+### Creating the Executable & Usage
 
 1. Clone this repository with `git clone https://github.com/Usarneme/photo_api_cli`
-2. Enter the new directory with `cd photo_api_cli`
-3. Enter the main program entrypoint directory with `cd main`
-4. If on a Mac or POSIX-compliant Linux machine, run the compiled binary from within the main/ directory by typing `./main` in your terminal of choice
-5. Utilize `./main --help` to see usage instructions:
+2. Enter project repository's main program entrypoint directory with `cd photo_api_cli/main/`
+3. Build the executable with `go build`
+4. Run the executable that was just created
+4a. If on a Mac or POSIX-compliant Linux machine, run with the command `./main`
+4b. If on Windows, run with the command `main.exe`
+5. Run the command with the help flag `./main --help` to see these usage instructions:
 
 ```
 [usage] - You can call this CLI application with an optional album number.
@@ -30,14 +32,11 @@ Visit [https://golang.org/doc/install](https://golang.org/doc/install) to get an
 
 ---
 
-### Installation Instructions
+### GoLang Installation Instructions
 
-(Optional) Only follow these if you want to compile from source:
-
-1. Clone this repository with `git clone https://github.com/Usarneme/photo_api_cli`
-2. Enter the new directory with `cd photo_api_cli`
-3. Enter the main program entrypoint directory with `cd main`
-4. Compile an executable with `go build`; this will generate a file called _main_
+* See the installation instructions for Windows, Mac, or Linux at [https://golang.org/doc/install](https://golang.org/doc/install)
+* Essentially, for Windows and Mac you can download the installer from the above link and run it. For Linux there is likely a package that can be installed with your package manager of choice, for example: `sudo apt-get install golang`. Try searching aptitude with `apt-cache search golang`
+* Confirm Go is installed with `go version`
 
 ---
 
